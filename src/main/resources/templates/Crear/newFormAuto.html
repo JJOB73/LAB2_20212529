@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/verLista/save}" th:object="${AutoEntity}" method="post">
+    <label>modelo:</label>
+    <input type="text" th:field="*{modelo}" /><br/>
+
+    <label>color:</label>
+    <input type="text" th:field="*{color}" /><br/>
+
+    <label>costo:</label>
+    <input type="number" th:field="*{costo_por_dia}" /><br/>
+
+    <label>kilometraje:</label>
+    <input type="number" th:field="*{kilometraje}" /><br/>
+
+    <button type="submit">Registrar</button>
+    <a href="/verLista">Cancelar</a>
+</form>
+</body>
+</html>
