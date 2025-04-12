@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lista Sede</title>
+</head>
+<body>
+<a href="/">
+    <button>Regresar</button>
+</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>distrito</th>
+            <th>direccion</th>
+        </tr>
+        <tr th:each="emp : ${sedeList}">
+            <td th:text="${emp.direccion}"></td>
+            <td th:text="${emp.distrito}"></td>
+
+        </tr>
+    </table>
+</body>
+</html>

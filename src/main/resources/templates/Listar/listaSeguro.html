@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">
+    <button>Regresar</button>
+</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>cobertura maxima</th>
+        <th>empresa aseguradora</th>
+    </tr>
+    <tr th:each="emp : ${seguroList}">
+        <td th:text="${emp.id}"></td>
+        <td th:text="${emp.cobertura_maxima}"></td>
+        <td th:text="${emp.empresa_aseguradora}"></td>
+        <td th:text="${emp.tarifa}"></td>
+
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Autos</title>
+</head>
+
+<body>
+<a href="/">
+    <button>Regresar</button>
+</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>modelo</th>
+            <th>color</th>
+            <th>kilometraje</th>
+            <th>costo por dia</th>
+        </tr>
+        <tr th:each="emp : ${autoList}">
+            <td th:text="${emp.id}"></td>
+            <td th:text="${emp.modelo}"></td>
+            <td th:text="${emp.color}"></td>
+            <td th:text="${emp.kilometraje}"></td>
+            <td th:text="${emp.costo_por_dia}"></td>
+        </tr>
+    </table>
+</body>
+</html>
